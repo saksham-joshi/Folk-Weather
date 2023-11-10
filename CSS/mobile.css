@@ -1,0 +1,247 @@
+@font-face {
+    font-family:berlin_sans ;
+    src: url("./Fonts/BRLNSR.TTF");
+}
+@font-face {
+    font-family: helvetica;
+    src: url("./Fonts/helvetica-rounded-bold-5871d05ead8de.otf");
+}
+@font-face {
+    font-family: bahnscrift;
+    src: url("./Fonts/BAHNSCHRIFT.TTF");
+}
+@font-face {
+    font-family: verdana;
+    src: url("./Fonts/verdana.ttf");
+}
+@font-face {
+    font-family: ackno;
+    src: url("./Fonts/ACKNO.TTF");
+}
+
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(73deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat:space;
+    height: 100%;
+    overflow-y: scroll !important;
+}
+
+#top_area img {
+    width:15%;
+}
+#top_area span{
+    font-family: berlin_sans;
+    font-size: xx-large;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color:#ffffff;
+    margin-left:5px;
+
+}
+#top_area{
+    vertical-align:middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    color: white;
+    border: 0.5px solid lightgray;
+}
+
+
+#input_city_name{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border:1px solid cyan;
+    font-family: bahnscrift;
+    letter-spacing: 0.8px;
+    font-size:large;
+    font-weight: bold;
+    color:darkblue;
+}
+#user_prompt div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user_prompt div span{
+    font-family: helvetica;
+    color:white
+}
+#user_prompt div button{
+    width: 20%;
+    height: 30px ;
+    border-radius: 5px;
+    margin-left: 15%;
+    font-family:helvetica;
+    font-size: large;
+    background-color: rgb(254, 73, 139,0.8);
+    border:none;
+    color:white;
+}
+#user_prompt div button:hover{
+    background-color:rgb(255, 0, 93) ;
+}
+
+#user_prompt div select{
+    border-radius: 6px;
+    height: 28px;
+    font-family: helvetica;
+    text-align: center;
+    background-color: #4158D0;
+    color:white;
+}
+
+#weather_detail{
+    margin-top:5%;
+}
+
+#credits_and_info{
+    background-color: rgba(136,25,117,0.7);
+    width:98%;
+    padding:4px;
+    border-radius: 15px;
+    margin-top:6%;
+    font-size:medium;
+    
+}
+#credits_and_info ul{
+    font-family: berlin_sans;
+}
+#credits_and_info ul li{
+    list-style-type: "»|";
+    color:whitesmoke
+}
+
+#credits_and_info ul li, #credits_and_info ul li a, #about_web_weather{
+    color:wheat;
+    font-family: verdana;
+}
+#credits_and_info ul li a:hover{
+    color:aqua;
+}
+
+#credit_heading{
+    font-family: ackno;
+    color:white; 
+    font-size:large; 
+    margin-bottom:2%;
+}
+
+table{
+    width:90%;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-color: #aabcfe;
+    border-spacing: 0;
+}
+
+.tg td {
+    background-color: #e8edff;
+    border-color: #aabcfe;
+    border-style: solid;
+    border-width: 1px;
+    color: #669;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    background-color: #b9c9fe;
+    border-color: #aabcfe;
+    border-style: solid;
+    border-width: 1px;
+    color: #039;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-41rr {
+    background-color: #e8edff;
+    border-color: inherit;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-io3p {
+    background-color: #e8edff;
+    border-color: inherit;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-4erg {
+    border-color: inherit;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-iaud {
+    background-color: #00d2cb;
+    border-color: inherit;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-kwiq {
+    border-color: inherit;
+    color: #000000;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-2me3 {
+    background-color: #00d2cb;
+    border-color: inherit;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-exe4 {
+    background-color: #68cbd0;
+    border-color: inherit;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-7btt {
+    border-color: inherit;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-azzy {
+    background-color: #68cbd0;
+    border-color: inherit;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    vertical-align: top
+}

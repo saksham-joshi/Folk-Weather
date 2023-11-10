@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SAKSHAM JOSHI">
+    <meta name="keywords"
+        content="weather, weather tomorrow, weather tomorrow agra, weather tomorrow mathura, weather check, weather station, weather station">
+    <meta name="description" content="free website to check weather">
+    <title>Web-Weather </title>
+
+    <link rel="stylesheet" media='(max-width:550px)' href="./CSS/mobile.css">
+    <link rel="stylesheet" media='(min-width:551px)' href="./CSS/desktop.css">
+
+    <link rel="icon" href="./CSS/Images/icon.png">
+
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <center>
+        <div id="top_area">
+            <img src="./CSS/Images/icon.png" alt="icon">
+            <span>Web-Weather</span>
+        </div>
+    </center>
+    <hr>
+    <div id="user_prompt">
+        <br />
+        <center>
+            <input type="text" id="input_city_name" placeholder="Enter your city name ...." required />
+        </center>
+
+
+        <br>
+        <div>
+            <span> Language:&nbsp</span>
+            <select id="language_box"></select>
+            <button id="request_btn" onclick="user_requested()">Done</button>
+        </div>
+
+        <br>
+        <div id="weather_detail"></div>
+
+    </div>
+
+    <div id="credits_and_info">
+        <br>
+        <div id="credit_heading" > ⩥ About : </div>
+        <div id="about_web_weather">
+            Web-Weather is a simple web application to get the weather report or news of your city. You can get weather report in different languages. Also, none of your searched locations are stored on the server which makes it more secure and anonymous.
+        </div>
+        <br>
+        <div id="credit_heading"> ⩥ Tools used :</div>
+        <ul>
+            <li>&nbsp <a href="https://www.weatherapi.com/">WeatherAPI</a> </li>
+            <li>&nbsp HTML.</li>
+            <li>&nbsp CSS.</li>
+            <li>&nbsp Javascript.</li>
+            <li>&nbsp Microsoft VS Code.</li>
+        </ul>
+        <div id="credit_heading"> ⩥ Developer Info : </div>
+        <ul>
+            <li>&nbsp Name: SAKSHAM JOSHI </li>
+            <li>&nbsp <a href="https://sakshamjoshi.netlify.app/"> Portfolio </a> </li>
+            <li>&nbsp <a href="https://www.linkedin.com/in/sakshamjoshi27"> Linkedin </a> </li>
+            <li>&nbsp <a href="https://github.com/saksham-joshi"> GitHub </a> </li>
+            <li>&nbsp <a href="https://twitter.com/sakshamjoshi27/"> X(Twitter) </a> </li>
+        </ul>
+
+
+    </div>
+</body>
+
+</html>
