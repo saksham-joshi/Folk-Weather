@@ -1,6 +1,7 @@
 var city_name_box;
 var language_box;
 var language_JSON;
+var api_key;
 
 var table_css =
 
@@ -186,7 +187,7 @@ function add_to_table(data) {
 function prepare_request(city_name, lang) {
     var temp = "";
     temp = (lang == "en") ? "" : ("&lang=" + lang);
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=69f582b551cd4132bda10111231011&q=${city_name}&days=3${temp}`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city_name}&days=3${temp}`)
         .then(response => response.json())
         .then(data => add_to_table(data));
 }
