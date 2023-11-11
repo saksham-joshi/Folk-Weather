@@ -1,30 +1,27 @@
 var city_name_box;
 var language_box;
 var language_JSON;
-var api_key;
 
-var table_css =
+window.addEventListener('load', function () {
 
-    window.addEventListener('load', function () {
+    city_name_box = document.querySelector("#input_city_name");
+    language_box = document.querySelector("#language_box");
 
-        city_name_box = document.querySelector("#input_city_name");
-        language_box = document.querySelector("#language_box");
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', './support/languages.json', true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                language_JSON = JSON.parse(xhr.responseText);
-                var language_item = "";
-                for (var key in language_JSON) {
-                    language_item = language_item + `\n <option>${key}</option>`;
-                }
-                document.querySelector("#language_box").innerHTML = language_item;
-                document.querySelector("#language_box").value = 'English';
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './support/languages.json', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            language_JSON = JSON.parse(xhr.responseText);
+            var language_item = "";
+            for (var key in language_JSON) {
+                language_item = language_item + `\n <option>${key}</option>`;
             }
-        };
-        xhr.send();
-    });
+            document.querySelector("#language_box").innerHTML = language_item;
+            document.querySelector("#language_box").value = 'English';
+        }
+    };
+    xhr.send();
+});
 
 function user_requested() {
     var city_name = city_name_box.value.trim();
@@ -36,6 +33,7 @@ function user_requested() {
 }
 
 function add_to_table(data) {
+    
     try {
 
 
@@ -180,14 +178,33 @@ function add_to_table(data) {
     </table>`;
     } catch (error) {
         alert("City name not found...\n|> Tip: Make sure to type correct spelling.");
-        city_name_box.value="";
+        city_name_box.value = "";
     }
 }
 
 function prepare_request(city_name, lang) {
-    var temp = "";
-    temp = (lang == "en") ? "" : ("&lang=" + lang);
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city_name}&days=3${temp}`)
-        .then(response => response.json())
-        .then(data => add_to_table(data));
+    
+    try {
+        var temp = "";
+        temp = (lang == "en") ? "" : ("&lang=" + lang);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './support/api_key.env', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                
+                fetch(`https://api.weatherapi.com/v1/forecast.json?key=${xhr.responseText}&q=${city_name}&days=3${temp}`)
+                    .then(response => response.json())
+                    .then(data => add_to_table(data))
+            }
+            else{
+                throw new Error();
+            }
+        };
+        xhr.send();
+
+    }
+    catch (error) {
+        alert("Unable to fetch weather detail at the moment. Please try again later.");
+    }
 }
