@@ -189,7 +189,7 @@ function prepare_request(city_name, lang) {
         temp = (lang == "en") ? "" : ("&lang=" + lang);
 
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', './support/api_key.env', true);
+        xhr.open('GET', './key/_key_.env', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 
