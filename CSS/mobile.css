@@ -63,6 +63,7 @@ hr{
     font-size:large;
     font-weight: bold;
     color:darkblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 #user_prompt div{
     display: flex;
@@ -83,9 +84,13 @@ hr{
     background-color: rgb(254, 73, 139,0.8);
     border:none;
     color:white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #user_prompt div button:hover{
     background-color:rgb(255, 0, 93) ;
+}
+#user_prompt div button:active{
+    box-shadow: none !important;
 }
 
 #user_prompt div select{
@@ -95,6 +100,11 @@ hr{
     text-align: center;
     background-color: #4158D0;
     color:white;
+}
+
+#language_box{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 2px 3px, rgba(0, 0, 0, 0.17) 0px 2px 5px, rgba(0, 0, 0, 0.09) 0px -3px 2px;
+
 }
 
 #weather_detail{
@@ -135,6 +145,7 @@ hr{
 
 table{
     width:90%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 1px;
 }
 
 .tg {
