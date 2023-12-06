@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
 
 function user_requested() {
     var city_name = city_name_box.value.trim();
+    document.querySelector("#weather_detail").innerHTML = "<p style='font-family:ackno; color:white;' >Wait ...</p> ";
     if (city_name.length == 0) {
         city_name_box.value = "";
         return;
@@ -179,17 +180,19 @@ function add_to_table(data) {
     } catch (error) {
         alert("City name not found...\n|> Tip: Make sure to type correct spelling.");
         city_name_box.value = "";
+        document.querySelector("#weather_detail").innerHTML = "";
     }
 }
 
 function prepare_request(city_name, lang) {
     
     try {
+
         var temp = "";
         temp = (lang == "en") ? "" : ("&lang=" + lang);
 
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', './key/_key_.env', true);
+        xhr.open('GET', './support/api_key.env', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 
@@ -206,5 +209,6 @@ function prepare_request(city_name, lang) {
     }
     catch (error) {
         alert("Unable to fetch weather detail at the moment. Please try again later.");
+        document.querySelector("#weather_detail").innerHTML = "";
     }
 }
